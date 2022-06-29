@@ -11,7 +11,16 @@ namespace Aa.Controllers
         // GET: Client
         public ActionResult Index()
         {
-            return View();
+            usuarios user = (usuarios)Session["user"];
+
+            if (Session.SessionID.Equals(Session["ID"]) && user.autorizacion == "CLIENT")
+            {
+                return View();
+            }
+            else
+            {
+                return Redirect("../Home/Index");
+            }
         }
     }
 }

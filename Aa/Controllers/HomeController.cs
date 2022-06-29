@@ -27,7 +27,11 @@ namespace Aa.Controllers
                 {
                     Session["user"] = user;
                     Session["ID"] = Session.SessionID;
+                    Session["usuario"] = user.nombres + " " + user.apellidos;
+                    Session["perfil"] = user.autorizacion;
 
+                    mensaje.estado = true;
+                    mensaje.msg = user.autorizacion;
                 }
                 else
                 {
