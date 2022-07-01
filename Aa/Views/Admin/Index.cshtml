@@ -1,4 +1,13 @@
-﻿<p>&nbsp;</p>
-@Session["perfil"].ToString();
-@Session["usuario"].ToString();
+﻿
+<div class="row mt-2 p-2">
+    <div class="col-2">
+        @Session["perfil"].ToString(): @Session["usuario"].ToString()
+    </div>
+    <div class="col-9"></div>
+    <div class="col-1 text-end">
+        <a class="btn btn-primary" href="../Admin/Salir">
+            <i class="bi-house-door"></i>
+        </a>
+    </div>
+</div>
 <hr />

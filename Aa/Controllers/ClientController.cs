@@ -22,5 +22,11 @@ namespace Aa.Controllers
                 return Redirect("../Home/Index");
             }
         }
+
+        public ActionResult Salir()
+        {
+            Session.Clear();
+            return Redirect("../Home/Index");
+        }
     }
 }
